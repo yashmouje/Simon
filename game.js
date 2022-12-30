@@ -5,10 +5,11 @@ let correctSequence = [];
 let userClickedSequence = [];
 let level = 0;
 // get next color in sequence
-if (gameStarted === false) {
-  gameStarted = true;
-  $(document).keydown(nextSequence);
-}
+$(document).keydown(function(){
+    if (gameStarted === false) {
+    nextSequence();
+    gameStarted = true;
+}});
 
 //play sound on click/declaring next color in sequence
 function playSound(name) {
